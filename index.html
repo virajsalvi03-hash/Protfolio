@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Viraj.jpg" class="logo" >
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web-Developer</p>
+                <h1>Hi, I'm <span> Viraj Salvi</span></h1>
+            </div>
+        </div>
+       
+    </div>
+    <!-- ------------------------------<About>------------------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Guy with computer.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Hello! I'm Viraj Salvi, a passionate and dedicated web developer with a strong focus on creating clean, responsive, 
+                        and user-friendly websites. I have experience working with modern web technologies, including HTML, CSS, and JavaScript. 
+                        My goal is to build web applications that not only look great but also provide an exceptional user experience.</p>
+                    <br>
+                    <br>
+                    <p class="p1">Feel free to explore my portfolio to see some of my work, 
+                        and don't hesitate to reach out if you'd like to collaborate or have a project in mind!</p>
+                    
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('project')">Projects</p>
+
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>Java</span><br>Create web services</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2022</span><br>B Sc.IT || Nirmala Memorial Foundation </li>
+                            <li><span>2018</span><br>H.S.C || Shri T.P Bhatia </li>
+                            <li><span>2016</span><br>S.S.C || S.V.P.V.V </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="project">
+                        <ul>
+                            <li><span>Login Authentication & Sign Up</span><br>Created this project using Adv. Java, this project validates users while login & we can sign up for new users.
+                                Project is created using a dynamic web project in Eclipse. TOMCAT server is used and MYSQL database is used
+                                to get data from users.
+                                </li>
+                            <li><span>Facebook Login page Clone</span><br>Project made purely using front technologies such HTML & CSS. It is responsive.</li>
+                            <li><span>Working Calculator</span><br>This Project is also made using Front end technologies such as HTML, CSS & JavaScript. JavaScript is mainly used
+                                in the project.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -------------------------------------------------SERVICES------------------------------------------------ -->
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                    Quod eveniet necessitatibus adipisci quos eaque magni repellat voluptatem, beatae doloremque a. Velit, architecto voluptatibus, minima labore officiis deserunt
+                     nihil a ipsam maiores pariatur similique sequi voluptatem. Nulla rem laboriosam, minus ut consectetur illo veritatis dolor magni, alias corrupti, 
+                     modi sunt non!</p>
+
+                     <h2>JAVA</h2>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                         Quod eveniet necessitatibus adipisci quos eaque magni repellat voluptatem, beatae doloremque a. Velit, architecto voluptatibus, minima labore officiis deserunt
+                          nihil a ipsam maiores pariatur similique sequi voluptatem. Nulla rem laboriosam, minus ut consectetur illo veritatis dolor magni, alias corrupti, 
+                          modi sunt non!</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ----------------------------------------------SCRIPT----------------------------------------------------- -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+    </script>
+</body>
+</html>
